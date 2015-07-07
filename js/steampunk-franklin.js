@@ -145,7 +145,7 @@ var updateDOMwithFundraisers = function (callback) {
             {
                 'promo_title': 'We are delighted to accept suggestions for improving this website. First priority is given to pull requests to our public repository. Please add relevant code comments that beginning high school students would understand.',
                 'promo_image': 'repo-image.png',
-                'promo_link': '//santasusana.org/adobe-cc-donation.html',
+                'promo_link': '//github.com/Santa-Susana-High-School/SteampunkFranklin',
                 'promo_button': 'Pull Requests',
                 'promo_class': 'suggestions'
             },
