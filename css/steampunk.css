@@ -1,0 +1,333 @@
+.primaryContainer {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.logo {
+    position: static;
+    left: 5px;
+    top: 5px;
+}
+
+.button-array {
+    position: static;
+    text-align: center;
+}
+
+.button-array button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.button-array label {
+    float: left;
+    margin-top: 11px;
+}
+
+hr {
+    margin: 0.0em 0;
+}
+
+.controls hr {
+    margin-top: 5px;
+}
+
+.message-buttons {
+    left: 260px;
+    top: 15px;
+    position: absolute;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.community button {
+    position: static;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.disclaimer button {
+    position: static;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.shirt-button button {
+    position: static;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.container .t-book-link {
+    float: left;
+    height: 184px;
+    margin: 0.5%;
+    clear: none;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-right: 0;
+    max-width: 24%;
+    min-width: 300px;
+    min-height: 184px;
+}
+
+.container .t-book-link .thorium {
+    max-width: 60%;
+}
+
+.container .t-book-link .image {
+    float: left;
+    height: auto;
+    margin-left: 0;
+    margin-top: 0;
+    clear: none;
+    width: 130px;
+    height: 184px;
+}
+
+.container .t-book-link .student {
+    width: 320px;
+    height: 184px;
+}
+
+.container .t-book-link .title {
+    width: auto;
+    height: auto;
+    text-align: left;
+    line-height: 1em;
+    margin: 0;
+    clear: none;
+    min-height: 156px;
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    display: inline-block;
+    padding: 10px 10px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.container .t-book-link .title button {
+    float: right;
+}
+
+.container .t-book-link .category {
+    font-size: 21px;
+}
+
+.container .t-book-link .title .details {
+    font-weight: normal;
+}
+
+.categoryDiv {
+    top: 12px;
+    height: 50px;
+    width: 100%;
+    background-color: #035c68;
+    position: absolute;
+}
+
+@media only screen and (max-width: 1500px) {
+    .container .t-book-link .sshs-donations {
+        max-width: 59%;
+        font-size: 13px;
+    }
+
+    .container .t-book-link .sshs-thorium {
+        max-width: 59%;
+        font-size: 13px;
+    }
+
+    .container .t-book-link .web-students {
+        max-width: 59%;
+        font-size: 13px;
+    }
+
+    .container .t-book-link .art-students {
+        max-width: 59%;
+        font-size: 13px;
+    }
+}
+
+
+@media only screen and (max-width: 1400px) {
+    .container .t-book-link {
+        float: left;
+        height: 184px;
+        margin-left: 1.5%;
+        margin-top: 14px;
+        clear: none;
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-right: 0;
+        min-width: 300px;
+        max-width: 31%;
+    }
+
+}
+
+@media only screen and (max-width: 1070px) {
+    .container .t-book-link .sshs-thorium {
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .container .t-book-link {
+        width: 100%;
+        min-width: 300px;
+        max-width: 48%;
+    }
+}
+
+@media only screen and (max-width: 653px) {
+    .shirt-button {
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .container .t-book-link {
+        max-width: none;
+        width: 95%;
+        min-width: 300px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .message-buttons button {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .message-buttons {
+        width: 40%;
+    }
+
+    .message-buttons button {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 445px) {
+    .message-buttons {
+        width: 35%;
+    }
+
+    .message-buttons button {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .message-buttons {
+        width: 30%;
+    }
+
+    .message-buttons button {
+        font-size: 8px;
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    .logo {
+        width: 100px;
+    }
+
+    .button-array {
+        margin-top: 30px;
+    }
+
+    .message-buttons {
+        left: 110px;
+        top: 0;
+        width: 50%;
+    }
+}
+
+.container .t-card-link {
+    float: left;
+    height: 184px;
+    margin-left: 1.5%;
+    margin-top: 14px;
+    clear: none;
+    width: 23%;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-right: 0;
+    max-width: 24%;
+    min-width: 360px;
+}
+
+.container .t-card-link .title {
+    float: right;
+    width: auto;
+    height: auto;
+    text-align: left;
+    line-height: 1em;
+    margin-left: 10px;
+    margin-top: 10px;
+    clear: none;
+    min-height: 156px;
+    color: white;
+    font-size: 15px;
+    display: inline-block;
+    padding: 4% 2%;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.container .t-card-link .img-wide {
+    max-width: 33%;
+}
+
+.container .t-card-link .image {
+    float: left;
+    height: auto;
+    margin-left: 0;
+    margin-top: 0;
+    clear: none;
+    width: 360px;
+    height: 184px;
+}
+
+.franklin-quote {
+    top: 0;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.student-card {
+    top: 0;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.send-contact-form-img {
+    top: 0;
+    width: 320px;
+    height: 184px;
+}
+
+.title-line {
+    text-align: center;
+    width: 100%;
+    font-size: x-large;
+}
+
+.connnected {
+    text-decoration: underline;
+}
+
