@@ -5,7 +5,6 @@
     "9780596517786": "content/images/franklin_quotes/steampunk_airship_quote_public_element.png",
     "9780596802028": "content/images/franklin_quotes/steampunk_tophat_quote_child_element.png",
     "9781449389543": "content/images/franklin_quotes/steampunk_clock_quote_empire_element.png",
-    "9780596805456": "content/images/franklin_quotes/steampunk_tophat_quote_master_element.png",
     "9780596806460": "content/images/franklin_quotes/steampunk_airship_quote_water_element.png"
   },
   "game": {
@@ -46,5 +45,14 @@
   "facebook": {
     "9781449303600": "content/images/franklin_quotes/steampunk_tophat_quote_friendof_element.png",
     "9781449382254": "content/images/franklin_quotes/steampunk_gear_quote_doing_good_element.png"
+  },
+  "design": {
+    "9781449359812": "content/images/franklin_quotes/steampunk_tophat_quote_master_element.png"
+  },
+  "interfaces": {
+    "9780596155353": "content/images/franklin_quotes/steampunk_tophat_quote_master_element.png"
+  },
+  "ui": {
+    "9780596515096": "content/images/franklin_quotes/steampunk_tophat_quote_master_element.png"
   }
 }
