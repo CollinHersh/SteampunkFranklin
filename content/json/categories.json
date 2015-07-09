@@ -44,6 +44,7 @@
     "canvas"
   ],
   "framework": [
+    "node.js",
     "rails",
     "cloud",
     "drupal",
@@ -58,8 +59,7 @@
     "eclipse",
     "jakarta",
     "javaserver",
-    "wordpress",
-    "node.js"
+    "wordpress"
   ],
   "mobile": [
     "iphone",
