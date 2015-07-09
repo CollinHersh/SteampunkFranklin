@@ -24,7 +24,7 @@ var updateDOMwithBooks = function (booksData, franklinQuotes, classLabel, active
 
     if (booksByCategory[actualClass] &&
         $(actualClass).size() < booksByCategory[actualClass].length) {
-        booksByCategory[classLabel].forEach(function (aBook) {
+        booksByCategory[classLabel].reverse().forEach(function (aBook) {
             if (!aBook.inDOM) {
                 var newDiv = document.createElement("div");
                 newDiv.classList.add("mix");
@@ -35,7 +35,7 @@ var updateDOMwithBooks = function (booksData, franklinQuotes, classLabel, active
                 });
 
                 var anAnchorLink = document.createElement("a");
-                anAnchorLink.setAttribute("href", "https://schools.safaribooksonline.com/library/view/" + aBook.magicnum + "/index.html");
+                anAnchorLink.setAttribute("href", "https://schools.safaribooksonline.com/library/view/" + aBook.magicnum + "/");
                 anAnchorLink.setAttribute("target", "_blank");
 
                 var coverImg = new Image(); // HTML5 Constructor
@@ -205,6 +205,8 @@ var updateDOMwithFundraisers = function (callback) {
         ];
     var this_container = $('#Container');
 
+    tshirtOffer(data_order_counter++);
+
     fundraisers.forEach(function (aFundraiser) {
 
         var newDiv = document.createElement("div");
@@ -269,11 +271,11 @@ var firstCoverForTopic = function (aCategory, bookList) {
         aBook.class.forEach(function (aClass) {
             if (aClass === aCategory) {
                 returnValue = aBook.isbn;
-                return(returnValue);
+                return (returnValue);
             }
         })
     });
-    return(returnValue);
+    return (returnValue);
 };
 
 var checkForQuoteAndShow = function (classLabel, aBook, franklinQuotes, activeFilter) {
@@ -308,6 +310,32 @@ var checkForQuoteAndShow = function (classLabel, aBook, franklinQuotes, activeFi
 
         }
     }
+};
+
+var tshirtOffer = function (data_order_counter) {
+    var newDiv = document.createElement("div");
+    newDiv.classList.add("mix");
+    newDiv.classList.add("t-book-link");
+    newDiv.classList.add("fundraiser");
+    newDiv.setAttribute("data-myorder", dataOrderAsText(data_order_counter));
+
+    var quoteDiv = document.createElement("div");
+    quoteDiv.classList.add("franklin-quote");
+
+    var coverImg = new Image(); // HTML5 Constructor
+    coverImg.src = "content/images/franklin_quotes/tshirts-offer.png";
+    coverImg.alt = "T-shirt offer";
+
+    var anAnchorLink = document.createElement("a");
+    anAnchorLink.setAttribute("href", "//gofundme.com/steampunk");
+    anAnchorLink.setAttribute("target", "_blank");
+
+    quoteDiv.appendChild(coverImg);
+    anAnchorLink.appendChild(quoteDiv);
+    newDiv.appendChild(anAnchorLink);
+
+    $('#Container').append(newDiv);
+
 };
 
 var updateDOMwithStudents = function (callback) {
