@@ -21,20 +21,11 @@ function loadJSON(jsonURI, callback) {
 
 var updateDOMwithBooks = function (booksData, franklinQuotes, classLabel, callback) {
     var actualClass = replaceSymbols(classLabel);
-    var bookDivToReverseForAppending = [];
     var containerDiv = $('#Container');
 
     if (booksByCategory[actualClass] &&
         $(actualClass).size() < booksByCategory[actualClass].length) {
-        booksByCategory[classLabel].sort(function(a, b) {
-            if (a.sortord > b.sortord) {
-                return 1;
-            }
-            if (a.sortord < b.sortord) {
-                return -1;
-            }
-            return 0;
-        }).forEach(function (aBook) {
+        booksByCategory[classLabel].forEach(function (aBook) {
             if (!aBook.inDOM) {
                 var newDiv = document.createElement("div");
                 newDiv.classList.add("mix");
@@ -80,16 +71,11 @@ var updateDOMwithBooks = function (booksData, franklinQuotes, classLabel, callba
                 anAnchorLink.appendChild(coverImg);
                 newDiv.appendChild(anAnchorLink);
 
-                bookDivToReverseForAppending.push(newDiv);
+                containerDiv.prepend(newDiv);
                 aBook.inDOM = true;
 
-                checkForQuoteAndShow(classLabel, aBook, franklinQuotes, bookDivToReverseForAppending);
+                checkForQuoteAndShow(classLabel, aBook, franklinQuotes);
             }
-
-            bookDivToReverseForAppending.forEach(function (aDiv) {
-                // add the newly created element and its content into the DOM
-                containerDiv.prepend(aDiv);
-            });
         });
     }
     if (callback)
@@ -99,7 +85,6 @@ var updateDOMwithBooks = function (booksData, franklinQuotes, classLabel, callba
 var updateDOMwithNavigation = function (categoryData, categorySelected, bookList, callback) {
     var data_order_counter = 0;
     var actualCategory = categorySelected.substr(1);
-    var categoryDivToReverseForAppending = [];
     var containerDiv = $('#Container');
 
     if (!categoryData[actualCategory] ||
@@ -110,7 +95,6 @@ var updateDOMwithNavigation = function (categoryData, categorySelected, bookList
         return;
     }
 
-    var this_container = $('#Container');
     categoryInDOM.push(actualCategory);
 
     categoryData[actualCategory].forEach(function (aCategory) {
@@ -140,16 +124,10 @@ var updateDOMwithNavigation = function (categoryData, categorySelected, bookList
         newDiv.appendChild(coverImg);
         newDiv.appendChild(categoryDiv);
 
-        categoryDivToReverseForAppending.push(newDiv);
+        containerDiv.prepend(newDiv);
 
         data_order_counter += 2;
 
-    });
-
-    categoryDivToReverseForAppending.reverse().forEach(function (aDiv) {
-        // add the newly created element and its content into the DOM
-
-        containerDiv.prepend(aDiv);
     });
 
     if (callback)
@@ -221,7 +199,7 @@ var updateDOMwithFundraisers = function (callback) {
                 'promo_class': 'web-students'
             }
         ];
-    var this_container = $('#Container');
+    var containerDiv = $('#Container');
 
     tshirtOffer(data_order_counter++);
 
@@ -275,7 +253,7 @@ var updateDOMwithFundraisers = function (callback) {
         }
 
         // add the newly created element and its content into the DOM
-        this_container.append(newDiv);
+        containerDiv.append(newDiv);
 
         data_order_counter += 2;
     });
@@ -296,14 +274,14 @@ var firstCoverForTopic = function (aCategory, bookList) {
     return (returnValue);
 };
 
-var checkForQuoteAndShow = function (classLabel, aBook, franklinQuotes, bookDivToReverseForAppending) {
+var checkForQuoteAndShow = function (classLabel, aBook, franklinQuotes) {
     if (franklinQuotes[classLabel]) {
         if (franklinQuotes[classLabel][aBook.isbn]) {
             var newDiv = document.createElement("div");
             newDiv.classList.add("mix");
             newDiv.classList.add("t-book-link");
             newDiv.classList.add(classLabel);
-            newDiv.setAttribute("data-myorder", dataOrderAsText(Number.parseInt(aBook.sortord) - 50));
+            newDiv.setAttribute("data-myorder", dataOrderAsText(Number.parseInt(aBook.sortord) + 50));
 
             var quoteDiv = document.createElement("div");
             quoteDiv.classList.add("franklin-quote");
@@ -320,7 +298,7 @@ var checkForQuoteAndShow = function (classLabel, aBook, franklinQuotes, bookDivT
             anAnchorLink.appendChild(quoteDiv);
             newDiv.appendChild(anAnchorLink);
 
-            bookDivToReverseForAppending.push(newDiv);
+            $('#Container').prepend(newDiv);
         }
     }
 };
@@ -367,7 +345,7 @@ var updateDOMwithStudents = function (callback) {
             {"name": "Carly", "course": "art-students"},
             {"name": "Janae", "course": "art-students"}
         ];
-    var this_container = $('#Container');
+    var containerDiv = $('#Container');
 
     students.forEach(function (aStudent) {
 
@@ -391,7 +369,7 @@ var updateDOMwithStudents = function (callback) {
         newDiv.appendChild(studentDiv);
 
         // add the newly created element and its content into the DOM
-        this_container.append(newDiv);
+        containerDiv.append(newDiv);
         data_order_counter += 2;
 
     });
@@ -420,7 +398,7 @@ var updateDOMwithStudents = function (callback) {
     contactFormDiv.appendChild(schoolDiv);
 
     // add the newly created element and its content into the DOM
-    this_container.append(contactFormDiv);
+    containerDiv.append(contactFormDiv);
 
     if (callback)
         callback();
@@ -498,7 +476,7 @@ var startMix = function (hashFound, callback) {
                 }
             },
             onMixBusy: function (state) {
-                console.log('MixItUp busy');
+                console.log('MixItUp busy running: ' + state.activeFilter);
             },
             onMixFail: function (state) {
                 console.log('No elements found matching ' + state.activeFilter);
@@ -523,7 +501,6 @@ var appStart = function () {
                                 function (hashFound) {
                                     if (hashFound > "") {
                                         var actualFilter = hashFound.substr(1);
-                                        var currentFilter = "." + actualFilter + ",.sshs-donations,.sshs-credit";
                                         updateDOMwithBooks(booksData, franklinQuotes, actualFilter);
                                         updateDOMwithNavigation(categoryData, "." + actualFilter, booksData);
                                     }
