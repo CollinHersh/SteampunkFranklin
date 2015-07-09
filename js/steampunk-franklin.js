@@ -5,7 +5,7 @@ var categoryData = [];
 var franklinQuotes = [];
 var categoryInDOM = [];
 var booksByCategory = {};
-var interval;
+var appendRequired = true;
 
 function loadJSON(jsonURI, callback) {
     var xobj = new XMLHttpRequest();
@@ -19,12 +19,22 @@ function loadJSON(jsonURI, callback) {
     xobj.send(null);
 }
 
-var updateDOMwithBooks = function (booksData, franklinQuotes, classLabel, activeFilter, callback) {
+var updateDOMwithBooks = function (booksData, franklinQuotes, classLabel, callback) {
     var actualClass = replaceSymbols(classLabel);
+    var bookDivToReverseForAppending = [];
+    var containerDiv = $('#Container');
 
     if (booksByCategory[actualClass] &&
         $(actualClass).size() < booksByCategory[actualClass].length) {
-        booksByCategory[classLabel].reverse().forEach(function (aBook) {
+        booksByCategory[classLabel].sort(function(a, b) {
+            if (a.sortord > b.sortord) {
+                return 1;
+            }
+            if (a.sortord < b.sortord) {
+                return -1;
+            }
+            return 0;
+        }).forEach(function (aBook) {
             if (!aBook.inDOM) {
                 var newDiv = document.createElement("div");
                 newDiv.classList.add("mix");
@@ -70,25 +80,27 @@ var updateDOMwithBooks = function (booksData, franklinQuotes, classLabel, active
                 anAnchorLink.appendChild(coverImg);
                 newDiv.appendChild(anAnchorLink);
 
-                // add the newly created element and its content into the DOM
-                if (activeFilter) {
+                bookDivToReverseForAppending.push(newDiv);
+                aBook.inDOM = true;
 
-                    $('#Container').mixItUp('prepend', $(newDiv),
-                        {filter: activeFilter});
-                    aBook.inDOM = true;
-                }
-
-                checkForQuoteAndShow(classLabel, aBook, franklinQuotes, activeFilter);
+                checkForQuoteAndShow(classLabel, aBook, franklinQuotes, bookDivToReverseForAppending);
             }
+
+            bookDivToReverseForAppending.forEach(function (aDiv) {
+                // add the newly created element and its content into the DOM
+                containerDiv.prepend(aDiv);
+            });
         });
     }
     if (callback)
         callback();
 };
 
-var updateDOMwithNavigation = function (categoryData, categorySelected, bookList, activeFilter, callback) {
+var updateDOMwithNavigation = function (categoryData, categorySelected, bookList, callback) {
     var data_order_counter = 0;
     var actualCategory = categorySelected.substr(1);
+    var categoryDivToReverseForAppending = [];
+    var containerDiv = $('#Container');
 
     if (!categoryData[actualCategory] ||
         actualCategory === "life-hacks" ||
@@ -101,7 +113,7 @@ var updateDOMwithNavigation = function (categoryData, categorySelected, bookList
     var this_container = $('#Container');
     categoryInDOM.push(actualCategory);
 
-    categoryData[actualCategory].reverse().forEach(function (aCategory) {
+    categoryData[actualCategory].forEach(function (aCategory) {
         var newDiv = document.createElement("div");
         newDiv.classList.add("mix");
         newDiv.classList.add("t-book-link");
@@ -128,12 +140,18 @@ var updateDOMwithNavigation = function (categoryData, categorySelected, bookList
         newDiv.appendChild(coverImg);
         newDiv.appendChild(categoryDiv);
 
-        // add the newly created element and its content into the DOM
-        this_container.mixItUp('prepend', $(newDiv),
-            {filter: activeFilter});
+        categoryDivToReverseForAppending.push(newDiv);
+
         data_order_counter += 2;
 
     });
+
+    categoryDivToReverseForAppending.reverse().forEach(function (aDiv) {
+        // add the newly created element and its content into the DOM
+
+        containerDiv.prepend(aDiv);
+    });
+
     if (callback)
         callback();
 };
@@ -278,14 +296,14 @@ var firstCoverForTopic = function (aCategory, bookList) {
     return (returnValue);
 };
 
-var checkForQuoteAndShow = function (classLabel, aBook, franklinQuotes, activeFilter) {
+var checkForQuoteAndShow = function (classLabel, aBook, franklinQuotes, bookDivToReverseForAppending) {
     if (franklinQuotes[classLabel]) {
         if (franklinQuotes[classLabel][aBook.isbn]) {
             var newDiv = document.createElement("div");
             newDiv.classList.add("mix");
             newDiv.classList.add("t-book-link");
             newDiv.classList.add(classLabel);
-            newDiv.setAttribute("data-myorder", dataOrderAsText(Number.parseInt(aBook.sortord) + 50));
+            newDiv.setAttribute("data-myorder", dataOrderAsText(Number.parseInt(aBook.sortord) - 50));
 
             var quoteDiv = document.createElement("div");
             quoteDiv.classList.add("franklin-quote");
@@ -302,12 +320,7 @@ var checkForQuoteAndShow = function (classLabel, aBook, franklinQuotes, activeFi
             anAnchorLink.appendChild(quoteDiv);
             newDiv.appendChild(anAnchorLink);
 
-            if (activeFilter) {
-
-                $('#Container').mixItUp('prepend', $(newDiv),
-                    {filter: activeFilter});
-            }
-
+            bookDivToReverseForAppending.push(newDiv);
         }
     }
 };
@@ -442,33 +455,46 @@ var startMix = function (hashFound, callback) {
     $('#Container').mixItUp({
         animation: {
             duration: 400,
-            effects: 'fade translateZ(-360px) translateY(10%) translateX(10%) rotateY(45deg) stagger(38ms)',
-            easing: 'ease'
+            effects: 'fade translateZ(-360px) translateY(10%) translateX(10%) rotateY(45deg) stagger(32ms)',
+            easing: 'ease',
+            queue: true,
+            queueLimit: 2000
         },
         load: {
             filter: '.life-hacks,.fundraiser',
-            sort: 'default:asc'
+            sort: 'myorder:asc'
         },
         controls: {
             live: true
         },
         callbacks: {
             onMixStart: function (state, futureState) {
-                if (futureState.activeFilter != null) {
-                    var actualFilter = futureState.activeFilter.split(",")[0];
-                    var actualClass = actualFilter.substr(1);
-                    var stateObj;
+                if (appendRequired) {
+                    if (futureState.activeFilter != null) {
+                        var actualFilter = futureState.activeFilter.split(",")[0];
+                        var actualSort = futureState.activeSort;
+                        var actualClass = actualFilter.substr(1);
+                        var stateObj;
 
-                    if ([".mix", ".life-hacks"].indexOf(actualFilter) < 0) {
-                        // TODO: If quantity in dom is too many, remove some old categories
-                        updateDOMwithBooks(booksData, franklinQuotes, actualClass, futureState.activeFilter);
-                        updateDOMwithNavigation(categoryData, actualFilter, booksData, futureState.activeFilter);
-                        stateObj = {index: actualClass};
-                        history.pushState(stateObj, actualClass, "index.html#" + actualClass);
-                    } else {
-                        stateObj = {index: ""};
-                        history.pushState(stateObj, actualClass, "index.html");
+                        if ([".mix", ".life-hacks"].indexOf(actualFilter) < 0) {
+                            // TODO: If quantity in dom is too many, remove some old categories
+                            updateDOMwithBooks(booksData, franklinQuotes, actualClass);
+                            updateDOMwithNavigation(categoryData, actualFilter, booksData);
+
+                            stateObj = {index: actualClass};
+                            history.pushState(stateObj, actualClass, "index.html#" + actualClass);
+                        } else {
+                            stateObj = {index: ""};
+                            history.pushState(stateObj, actualClass, "index.html");
+                        }
+                        appendRequired = false;
+                        $('#Container').mixItUp('multiMix', {
+                            filter: futureState.activeFilter,
+                            sort: actualSort
+                        });
                     }
+                } else {
+                    appendRequired = true;
                 }
             },
             onMixBusy: function (state) {
@@ -498,8 +524,8 @@ var appStart = function () {
                                     if (hashFound > "") {
                                         var actualFilter = hashFound.substr(1);
                                         var currentFilter = "." + actualFilter + ",.sshs-donations,.sshs-credit";
-                                        updateDOMwithBooks(booksData, franklinQuotes, actualFilter, currentFilter);
-                                        updateDOMwithNavigation(categoryData, "." + actualFilter, booksData, currentFilter);
+                                        updateDOMwithBooks(booksData, franklinQuotes, actualFilter);
+                                        updateDOMwithNavigation(categoryData, "." + actualFilter, booksData);
                                     }
                                 }
                             );
