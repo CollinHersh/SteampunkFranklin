@@ -87,7 +87,7 @@ var updateDOMwithNavigation = function (categoryData, categorySelected, bookList
     var actualCategory = categorySelected.substr(1);
     var containerDiv = $('#Container');
 
-    if (!categoryData[actualCategory] ||
+    if (!categoryData[actualCategory]  ||
         actualCategory === "life-hacks" ||
         categoryInDOM.indexOf(actualCategory) >= 0) {
         if (callback)
@@ -429,7 +429,7 @@ var findBooksByCategory = function (callback) {
 };
 
 // Instantiate MixItUp:
-var startMix = function (hashFound, callback) {
+var startMix = function (callback) {
     $('#Container').mixItUp({
         animation: {
             duration: 400,
@@ -452,6 +452,7 @@ var startMix = function (hashFound, callback) {
                         var actualFilter = futureState.activeFilter.split(",")[0];
                         var actualSort = futureState.activeSort;
                         var actualClass = actualFilter.substr(1);
+                        var nextFilter = futureState.activeFilter;
                         var stateObj;
 
                         if ([".mix", ".life-hacks"].indexOf(actualFilter) < 0) {
@@ -462,12 +463,23 @@ var startMix = function (hashFound, callback) {
                             stateObj = {index: actualClass};
                             history.pushState(stateObj, actualClass, "index.html#" + actualClass);
                         } else {
-                            stateObj = {index: ""};
-                            history.pushState(stateObj, actualClass, "index.html");
+                            var hashToken = window.location.hash.substr(1);
+                            if (window.location.hash > "" && booksByCategory[hashToken]) {
+                                actualClass = hashToken;
+                                actualFilter = "." + actualClass;
+                                nextFilter += "," + actualFilter;
+                                nextFilter = nextFilter.replace(".life-hacks,", "");
+
+                                updateDOMwithBooks(booksData, franklinQuotes, actualClass);
+                                updateDOMwithNavigation(categoryData, "." + actualClass, booksData);
+                            } else {
+                                stateObj = {index: ""};
+                                history.pushState(stateObj, actualClass, "index.html");
+                            }
                         }
                         appendRequired = false;
                         $('#Container').mixItUp('multiMix', {
-                            filter: futureState.activeFilter,
+                            filter: nextFilter,
                             sort: actualSort
                         });
                     }
@@ -483,8 +495,6 @@ var startMix = function (hashFound, callback) {
             }
         }
     });
-    if (callback)
-        callback(hashFound);
 };
 
 var appStart = function () {
@@ -497,15 +507,8 @@ var appStart = function () {
                 findBooksByCategory(function () {
                     updateDOMwithFundraisers(function () {
                         updateDOMwithStudents(function () {
-                            startMix(window.location.hash,
-                                function (hashFound) {
-                                    if (hashFound > "") {
-                                        var actualFilter = hashFound.substr(1);
-                                        updateDOMwithBooks(booksData, franklinQuotes, actualFilter);
-                                        updateDOMwithNavigation(categoryData, "." + actualFilter, booksData);
-                                    }
-                                }
-                            );
+                            appendRequired = true;
+                            startMix();
                         });
                     });
                 });

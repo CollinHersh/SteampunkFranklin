@@ -525,7 +525,7 @@
     "hits": 0,
     "class": [
       "actionscript",
-      "developer`s",
+      "developer",
       "guide",
       "puremvc"
     ],
@@ -542,7 +542,7 @@
     "hits": 0,
     "class": [
       "actionscript",
-      "developer`s",
+      "developer",
       "guide",
       "robotlegs"
     ],
@@ -2016,7 +2016,7 @@
     "class": [
       "asp.net",
       "2.0",
-      "developer`s",
+      "developer",
       "notebook"
     ],
     "sortord": "123",
@@ -2645,7 +2645,7 @@
     "maincat": "unknown",
     "hits": 0,
     "class": [
-      "berkun`s",
+      "berkun",
       "managing",
       "breakthrough",
       "projects",
@@ -2877,7 +2877,7 @@
       "now",
       "current",
       "perspectives",
-      "o`reilly",
+      "oreilly",
       "radar"
     ],
     "sortord": "176",
@@ -2924,7 +2924,7 @@
     "hits": 0,
     "class": [
       "book",
-      "futurist`s",
+      "futurist",
       "manifesto"
     ],
     "sortord": "179",
@@ -3968,7 +3968,7 @@
       "eos",
       "digital",
       "rebel",
-      "t1i/500d",
+      "t1i-500d",
       "companion"
     ],
     "sortord": "240",
@@ -3987,7 +3987,7 @@
       "eos",
       "digital",
       "rebel",
-      "xs/1000d",
+      "xs-1000d",
       "companion"
     ],
     "sortord": "241",
@@ -4423,7 +4423,7 @@
     "hits": 0,
     "class": [
       "c.j.",
-      "date`s",
+      "date",
       "database",
       "design",
       "relational",
@@ -4448,7 +4448,7 @@
     "hits": 0,
     "class": [
       "c.j.",
-      "date`s",
+      "date",
       "sql",
       "relational",
       "theory",
@@ -4747,7 +4747,7 @@
     "hits": 0,
     "class": [
       "colin",
-      "moock`s",
+      "moock",
       "lost",
       "actionscript",
       "3.0",
@@ -4768,7 +4768,7 @@
     "hits": 0,
     "class": [
       "colin",
-      "moock`s",
+      "moock",
       "lost",
       "actionscript",
       "3.0",
@@ -5441,7 +5441,7 @@
     "hits": 0,
     "class": [
       "croll",
-      "power`s",
+      "power",
       "communilytics",
       "master",
       "class"
@@ -6124,7 +6124,7 @@
     "hits": 0,
     "class": [
       "david",
-      "pogue`s",
+      "pogue",
       "digital",
       "photography",
       "missing",
@@ -7337,7 +7337,7 @@
     "maincat": "Desktop and Web Applications",
     "hits": 0,
     "class": [
-      "don`t",
+      "dont",
       "get",
       "burned",
       "ebay"
@@ -8691,7 +8691,7 @@
       "excel",
       "2003",
       "programming",
-      "developer`s",
+      "developer",
       "notebook"
     ],
     "sortord": "526",
@@ -12462,7 +12462,7 @@
     "hits": 0,
     "class": [
       "ilife",
-      "`04",
+      "04",
       "missing",
       "manual"
     ],
@@ -12498,7 +12498,7 @@
     "hits": 0,
     "class": [
       "imovie",
-      "`09",
+      "09",
       "idvd",
       "missing",
       "manual"
@@ -12516,7 +12516,7 @@
     "hits": 24,
     "class": [
       "imovie",
-      "`11",
+      "11",
       "idvd",
       "missing",
       "manual"
@@ -13634,7 +13634,7 @@
     "hits": 0,
     "class": [
       "iphoto",
-      "`09",
+      "09",
       "missing",
       "manual"
     ],
@@ -13651,7 +13651,7 @@
     "hits": 3,
     "class": [
       "iphoto",
-      "`11",
+      "11",
       "missing",
       "manual"
     ],
@@ -13960,7 +13960,7 @@
     "hits": 0,
     "class": [
       "iwork",
-      "`05",
+      "05",
       "missing",
       "manual"
     ],
@@ -13977,7 +13977,7 @@
     "hits": 0,
     "class": [
       "iwork",
-      "`09",
+      "09",
       "missing",
       "manual"
     ],
@@ -14460,7 +14460,7 @@
     "hits": 1,
     "class": [
       "java",
-      "i/o"
+      "i-o"
     ],
     "sortord": "877",
     "author": "Elliotte Rusty Harold."
@@ -14475,7 +14475,7 @@
     "hits": 1,
     "class": [
       "java",
-      "i/o"
+      "i-o"
     ],
     "sortord": "878",
     "author": "Elliotte Rusty Harold."
@@ -15389,7 +15389,7 @@
     "hits": 0,
     "class": [
       "jboss",
-      "developer`s",
+      "developer",
       "notebook"
     ],
     "sortord": "935",
@@ -15901,7 +15901,7 @@
     "class": [
       "layout",
       "pages",
-      "`09",
+      "09",
       "mini",
       "missing",
       "manual"
@@ -16237,7 +16237,7 @@
     "hits": 0,
     "class": [
       "debian",
-      "gnu/linux"
+      "gnu-linux"
     ],
     "sortord": "990",
     "author": "Bill McCarty."
@@ -17674,7 +17674,7 @@
     "class": [
       "linux",
       "network",
-      "administrator`s",
+      "administrator",
       "guide",
       "second"
     ],
@@ -19017,7 +19017,7 @@
     "hits": 62,
     "class": [
       "mastering",
-      "perl/tk"
+      "perl-tk"
     ],
     "sortord": "1166",
     "author": "Stephen Lidie. Nancy Walsh."
@@ -19130,7 +19130,7 @@
     "hits": 58,
     "class": [
       "maven",
-      "developer`s",
+      "developer",
       "notebook"
     ],
     "sortord": "1173",
@@ -19766,7 +19766,7 @@
     "hits": 0,
     "class": [
       "mono",
-      "developer`s",
+      "developer",
       "notebook"
     ],
     "sortord": "1212",
@@ -21247,7 +21247,7 @@
   {
     "id": "1304",
     "magicnum": "Oracle-PL_SQL-Best-Practices/0596001215",
-    "title": "Oracle PL/SQL Best Practices",
+    "title": "Oracle pl-sql Best Practices",
     "isbn": "0596001215",
     "pubdate": "2001-04-09T00:00:00.000Z",
     "maincat": "Information Technology & Software Development",
@@ -21264,7 +21264,7 @@
   {
     "id": "1305",
     "magicnum": "Oracle-PL_SQL-Best-Practices%252C-2nd-Edition/9780596514105",
-    "title": "Oracle PL/SQL Best Practices, 2nd Edition",
+    "title": "Oracle pl-sql Best Practices, 2nd Edition",
     "isbn": "9780596514105",
     "pubdate": "2007-10-22T00:00:00.000Z",
     "maincat": "Information Technology & Software Development",
@@ -21281,14 +21281,14 @@
   {
     "id": "1306",
     "magicnum": "Oracle-PL_SQL-for-DBAs/0596005873",
-    "title": "Oracle PL/SQL for DBAs",
+    "title": "Oracle pl-sql for DBAs",
     "isbn": "0596005873",
     "pubdate": "2005-10-31T00:00:00.000Z",
     "maincat": "Information Technology & Software Development",
     "hits": 0,
     "class": [
       "oracle",
-      "pl/sql",
+      "pl-sql",
       "dbas"
     ],
     "sortord": "1306",
@@ -21297,14 +21297,14 @@
   {
     "id": "1307",
     "magicnum": "Oracle-PL_SQL-Language-Pocket-Reference/1565924576",
-    "title": "Oracle PL/SQL Language Pocket Reference",
+    "title": "Oracle pl-sql Language Pocket Reference",
     "isbn": "1565924576",
     "pubdate": "1999-04-01T00:00:00.000Z",
     "maincat": "Information Technology & Software Development",
     "hits": 101,
     "class": [
       "oracle",
-      "pl/sql",
+      "pl-sql",
       "languages",
       "pocket",
       "reference"
@@ -21315,14 +21315,14 @@
   {
     "id": "1308",
     "magicnum": "Oracle-PL_SQL-Language-Pocket-Reference%252C-4th-Edition/9780596514044",
-    "title": "Oracle PL/SQL Language Pocket Reference, 4th Edition",
+    "title": "Oracle pl-sql Language Pocket Reference, 4th Edition",
     "isbn": "9780596514044",
     "pubdate": "2007-10-23T00:00:00.000Z",
     "maincat": "Information Technology & Software Development",
     "hits": 0,
     "class": [
       "oracle",
-      "pl/sql",
+      "pl-sql",
       "languages",
       "pocket",
       "reference"
@@ -21333,14 +21333,14 @@
   {
     "id": "1309",
     "magicnum": "Oracle-PL_SQL-Language-Pocket-Reference%252C-Second-Edition/0596004729",
-    "title": "Oracle PL/SQL Language Pocket Reference, Second Edition",
+    "title": "Oracle pl-sql Language Pocket Reference, Second Edition",
     "isbn": "0596004729",
     "pubdate": "2003-02-06T00:00:00.000Z",
     "maincat": "Information Technology & Software Development",
     "hits": 0,
     "class": [
       "oracle",
-      "pl/sql",
+      "pl-sql",
       "languages",
       "pocket",
       "reference",
@@ -21352,14 +21352,14 @@
   {
     "id": "1310",
     "magicnum": "Oracle-PL_SQL-Programming%252C-4th-Edition/0596009771",
-    "title": "Oracle PL/SQL Programming, 4th Edition",
+    "title": "Oracle pl-sql Programming, 4th Edition",
     "isbn": "0596009771",
     "pubdate": "2005-08-22T00:00:00.000Z",
     "maincat": "Information Technology & Software Development",
     "hits": 0,
     "class": [
       "oracle",
-      "pl/sql",
+      "pl-sql",
       "programming"
     ],
     "sortord": "1310",
@@ -21368,14 +21368,14 @@
   {
     "id": "1311",
     "magicnum": "Oracle-PL_SQL-Programming%252C-5th-Edition/9780596805401",
-    "title": "Oracle PL/SQL Programming, 5th Edition",
+    "title": "Oracle pl-sql Programming, 5th Edition",
     "isbn": "9780596805401",
     "pubdate": "2009-09-24T00:00:00.000Z",
     "maincat": "Information Technology & Software Development",
     "hits": 30,
     "class": [
       "oracle",
-      "pl/sql",
+      "pl-sql",
       "programming"
     ],
     "sortord": "1311",
@@ -21384,14 +21384,14 @@
   {
     "id": "1312",
     "magicnum": "Oracle-PL_SQL-Programming%252C-6th-Edition/9781449324445",
-    "title": "Oracle PL/SQL Programming, 6th Edition",
+    "title": "Oracle pl-sql Programming, 6th Edition",
     "isbn": "9781449324445",
     "pubdate": "2014-02-07T00:00:00.000Z",
     "maincat": "Information Technology & Software Development",
     "hits": 150,
     "class": [
       "oracle",
-      "pl/sql",
+      "pl-sql",
       "programming"
     ],
     "sortord": "1312",
@@ -21400,16 +21400,16 @@
   {
     "id": "1313",
     "magicnum": "Oracle-PL_SQL-Programming%253A-A-Developer%2527s-Workbook/9781449324070",
-    "title": "Oracle PL/SQL Programming: A Developer's Workbook",
+    "title": "Oracle pl-sql Programming: A Developer's Workbook",
     "isbn": "9781449324070",
     "pubdate": "2000-05-01T00:00:00.000Z",
     "maincat": "Information Technology & Software Development",
     "hits": 0,
     "class": [
       "oracle",
-      "pl/sql",
+      "pl-sql",
       "programming",
-      "developer`s",
+      "developer",
       "workbook"
     ],
     "sortord": "1313",
@@ -21418,14 +21418,14 @@
   {
     "id": "1314",
     "magicnum": "Oracle-PL_SQL-Programming%252C-Third-Edition/0596003811",
-    "title": "Oracle PL/SQL Programming, Third Edition",
+    "title": "Oracle pl-sql Programming, Third Edition",
     "isbn": "0596003811",
     "pubdate": "2002-09-23T00:00:00.000Z",
     "maincat": "Information Technology & Software Development",
     "hits": 0,
     "class": [
       "oracle",
-      "pl/sql",
+      "pl-sql",
       "programming",
       "third"
     ],
@@ -21589,7 +21589,7 @@
   {
     "id": "1324",
     "magicnum": "Oracle-Web-Applications%253A--PL_SQL-Developer%2527s-Intro/1565926870",
-    "title": "Oracle Web Applications: PL/SQL Developer's Intro",
+    "title": "Oracle Web Applications: pl-sql Developer's Intro",
     "isbn": "1565926870",
     "pubdate": "1999-09-01T00:00:00.000Z",
     "maincat": "Information Technology & Software Development",
@@ -21598,8 +21598,8 @@
       "oracle",
       "web",
       "applications",
-      "pl/sql",
-      "developer`s",
+      "pl-sql",
+      "developer",
       "intro"
     ],
     "sortord": "1324",
@@ -21631,7 +21631,7 @@
     "maincat": "unknown",
     "hits": 0,
     "class": [
-      "o`reilly",
+      "oreilly",
       "webcast",
       "5",
       "ways",
@@ -21652,7 +21652,7 @@
     "maincat": "unknown",
     "hits": 0,
     "class": [
-      "o`reilly",
+      "oreilly",
       "webcast",
       "7",
       "ways",
@@ -21674,7 +21674,7 @@
     "maincat": "unknown",
     "hits": 0,
     "class": [
-      "o`reilly",
+      "oreilly",
       "webcast",
       "advanced",
       "twitter",
@@ -21692,7 +21692,7 @@
     "maincat": "unknown",
     "hits": 0,
     "class": [
-      "o`reilly",
+      "oreilly",
       "webcast",
       "creating",
       "your",
@@ -21712,7 +21712,7 @@
     "maincat": "unknown",
     "hits": 0,
     "class": [
-      "o`reilly",
+      "oreilly",
       "webcast",
       "how",
       "build",
@@ -21733,7 +21733,7 @@
     "maincat": "unknown",
     "hits": 0,
     "class": [
-      "o`reilly",
+      "oreilly",
       "webcast",
       "how",
       "effectively",
@@ -21755,7 +21755,7 @@
     "maincat": "unknown",
     "hits": 0,
     "class": [
-      "o`reilly",
+      "oreilly",
       "webcast",
       "making",
       "tax",
@@ -21775,7 +21775,7 @@
     "maincat": "unknown",
     "hits": 0,
     "class": [
-      "o`reilly",
+      "oreilly",
       "webcast",
       "reconsidering",
       "social",
@@ -21793,7 +21793,7 @@
     "maincat": "unknown",
     "hits": 0,
     "class": [
-      "o`reilly",
+      "oreilly",
       "webcast",
       "sharepoint",
       "arra",
@@ -21811,7 +21811,7 @@
     "maincat": "unknown",
     "hits": 0,
     "class": [
-      "o`reilly",
+      "oreilly",
       "webcast",
       "step-by-step",
       "mysql",
@@ -21830,7 +21830,7 @@
     "maincat": "unknown",
     "hits": 0,
     "class": [
-      "o`reilly",
+      "oreilly",
       "webcast",
       "twitter",
       "power",
@@ -22088,7 +22088,7 @@
     "class": [
       "palm",
       "programming",
-      "developer`s",
+      "developer",
       "guide"
     ],
     "sortord": "1351",
@@ -22167,7 +22167,7 @@
     "maincat": "unknown",
     "hits": 0,
     "class": [
-      "paul`s",
+      "paul",
       "python",
       "pearls"
     ],
@@ -22592,7 +22592,7 @@
     "class": [
       "perl",
       "testing",
-      "developer`s",
+      "developer",
       "notebook"
     ],
     "sortord": "1383",
@@ -23736,7 +23736,7 @@
     "maincat": "Information Technology & Software Development",
     "hits": 80,
     "class": [
-      "programmer`s",
+      "programmer",
       "guide",
       "drupal"
     ],
@@ -25749,7 +25749,7 @@
     "class": [
       "quicktime",
       "java",
-      "developer`s",
+      "developer",
       "notebook"
     ],
     "sortord": "1577",
@@ -27139,7 +27139,7 @@
     "hits": 0,
     "class": [
       "scott",
-      "neil`s",
+      "neil",
       "designing",
       "web",
       "interfaces",
@@ -27175,7 +27175,7 @@
     "class": [
       "scripting",
       "indesign",
-      "cs3/4",
+      "cs3-4",
       "javascript"
     ],
     "sortord": "1665",
@@ -27307,7 +27307,7 @@
     "class": [
       "securing",
       "windows",
-      "nt/2000",
+      "nt-2000",
       "servers",
       "internet"
     ],
@@ -27717,7 +27717,7 @@
     "hits": 11,
     "class": [
       "sharepoint",
-      "user`s",
+      "user",
       "guide"
     ],
     "sortord": "1699",
@@ -27912,7 +27912,7 @@
       "social",
       "media",
       "analytics",
-      "greenplum`s",
+      "greenplum",
       "data",
       "computing",
       "appliance"
@@ -28001,7 +28001,7 @@
     "class": [
       "solaris",
       "8",
-      "administrator`s",
+      "administrator",
       "guide"
     ],
     "sortord": "1716",
@@ -28082,7 +28082,7 @@
     "hits": 0,
     "class": [
       "spring",
-      "developer`s",
+      "developer",
       "notebook"
     ],
     "sortord": "1721",
@@ -28739,7 +28739,7 @@
     "hits": 0,
     "class": [
       "swt",
-      "developer`s",
+      "developer",
       "notebook"
     ],
     "sortord": "1760",
@@ -28864,7 +28864,7 @@
     "maincat": "Information Technology & Software Development",
     "hits": 0,
     "class": [
-      "tcl/tk",
+      "tcl-tk",
       "nutshell"
     ],
     "sortord": "1768",
@@ -28879,7 +28879,7 @@
     "maincat": "Information Technology & Software Development",
     "hits": 45,
     "class": [
-      "tcp/ip",
+      "tcp-ip",
       "network",
       "administration"
     ],
@@ -29246,7 +29246,7 @@
     "pubdate": "2012-02-15T00:00:00.000Z",
     "maincat": "Desktop and Web Applications",
     "hits": 6,
-    "class": ["#tweetsmart", "twitter", "social"],
+    "class": ["tweetsmart", "twitter", "social"],
     "sortord": "1792",
     "author": "J. S. McDougall."
   },
@@ -30389,7 +30389,7 @@
     "hits": 39,
     "class": [
       "virtualization",
-      "manager`s",
+      "manager",
       "guide"
     ],
     "sortord": "1864",
@@ -30424,7 +30424,7 @@
       "visual",
       "basic",
       "2005",
-      "developer`s",
+      "developer",
       "notebook"
     ],
     "sortord": "1866",
@@ -30476,7 +30476,7 @@
       "visual",
       "c_sharp",
       "2005",
-      "developer`s",
+      "developer",
       "notebook"
     ],
     "sortord": "1869",
@@ -30769,7 +30769,7 @@
     "class": [
       "web",
       "graphics",
-      "perl/tk",
+      "perl-tk",
       "programming"
     ],
     "sortord": "1887",
@@ -31220,7 +31220,7 @@
     "maincat": "unknown",
     "hits": 0,
     "class": [
-      "what`s",
+      "what",
       "mine",
       "yours"
     ],
@@ -31236,7 +31236,7 @@
     "maincat": "unknown",
     "hits": 0,
     "class": [
-      "what`s",
+      "what",
       "new",
       "cool",
       "drupal",
@@ -31254,7 +31254,7 @@
     "maincat": "Information Technology & Software Development",
     "hits": 0,
     "class": [
-      "what`s",
+      "what",
       "new",
       "adobe",
       "air",
@@ -31272,7 +31272,7 @@
     "maincat": "Information Technology & Software Development",
     "hits": 2,
     "class": [
-      "what`s",
+      "what",
       "new",
       "apache",
       "web",
@@ -31291,7 +31291,7 @@
     "maincat": "unknown",
     "hits": 0,
     "class": [
-      "what`s",
+      "what",
       "new",
       "css3"
     ],
@@ -31307,7 +31307,7 @@
     "maincat": "Digital Media",
     "hits": 0,
     "class": [
-      "what`s",
+      "what",
       "new",
       "flash",
       "player",
@@ -31325,7 +31325,7 @@
     "maincat": "Information Technology & Software Development",
     "hits": 3,
     "class": [
-      "what`s",
+      "what",
       "new",
       "java",
       "7"
@@ -31342,7 +31342,7 @@
     "maincat": "Desktop and Web Applications",
     "hits": 0,
     "class": [
-      "what`s",
+      "what",
       "new",
       "windows",
       "vista"
@@ -31359,7 +31359,7 @@
     "maincat": "unknown",
     "hits": 0,
     "class": [
-      "where`s",
+      "where",
       "money",
       "big",
       "data"
@@ -31377,7 +31377,7 @@
     "hits": 1,
     "class": [
       "wikipedia",
-      "reader`s",
+      "reader",
       "guide",
       "missing",
       "manual"
@@ -31681,7 +31681,7 @@
     "class": [
       "windows",
       "nt",
-      "tcp/ip",
+      "tcp-ip",
       "network",
       "administration"
     ],
@@ -32333,7 +32333,7 @@
       "word",
       "processing",
       "pages",
-      "`09",
+      "09",
       "mini",
       "missing",
       "manual"
@@ -32907,7 +32907,7 @@
     "hits": 56,
     "class": [
       "youtube",
-      "insider`s",
+      "insider",
       "guide",
       "climbing",
       "charts"
